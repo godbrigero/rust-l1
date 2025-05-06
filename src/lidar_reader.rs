@@ -17,6 +17,7 @@ impl LidarReader {
     pub fn new_with_initialize(
         port: &str,
         baudrate: u32,
+        cloud_scan_num: u16,
         max_distance_meters: f32,
         min_distance_meters: f32,
     ) -> Result<Self, Box<dyn std::error::Error>> {
@@ -29,7 +30,7 @@ impl LidarReader {
         let result = unsafe {
             initialize(
                 reader,
-                18,
+                cloud_scan_num,
                 port.as_ptr(),
                 baudrate,
                 0.0,
