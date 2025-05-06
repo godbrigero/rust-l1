@@ -10,6 +10,14 @@ A Rust wrapper for the Unitree LiDAR SDK, providing safe and idiomatic Rust bind
 - DBSCAN clustering integration
 - 3D visualization capabilities with kiss3d
 
+## Platform Support
+
+**Important:** This library currently only supports:
+- Linux operating systems
+- aarch64 and x86_64 architectures
+
+Other platforms are not supported due to native library dependencies.
+
 ## Installation
 
 ### Prerequisites
@@ -17,6 +25,7 @@ A Rust wrapper for the Unitree LiDAR SDK, providing safe and idiomatic Rust bind
 - Rust toolchain (2021 edition or newer)
 - C++ compiler (for binding to native libraries)
 - Unitree LiDAR SDK libraries
+- Linux operating system (aarch64 or x86_64)
 
 ### Build from Source
 
@@ -88,6 +97,7 @@ This project is in early development and needs significant improvement. The curr
 - Test coverage is insufficient
 - API design needs refinement
 - Memory safety concerns at FFI boundaries
+- Platform support is limited to Linux (aarch64/x86_64)
 
 If you have experience with Rust, LiDAR technologies, or C++ interop, your contributions would be extremely valuable!
 
